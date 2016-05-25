@@ -3,15 +3,17 @@ class Openfst < Formula
   url "http://openfst.org/twiki/pub/FST/FstDownload/openfst-1.5.1.tar.gz"
   sha256 "6593edb401d047d942365437be012d974990609b6eb89814d1c6422a4161771e"
 
+  patch do
+    url "https://raw.githubusercontent.com/foundintranslation/Kaldi/master/tools/openfst.patch"
+    sha256 "66e3e750ed38ca890842e5ebc3fa2574b73d4f4a"
+  end
+
   needs :cxx11
 
   def install
-    patch do
-      url "https://raw.githubusercontent.com/foundintranslation/Kaldi/master/tools/openfst.patch"
-      sha1 "9917adbc68ab0618b5a66895ac237ef78f60ba71"
-    end
 
     ENV.cxx11
+
     system "./configure", "--prefix=#{prefix}",
                           "--disable-dependency-tracking",
                           "--enable-compact-fsts",
