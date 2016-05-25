@@ -6,6 +6,11 @@ class Openfst < Formula
   needs :cxx11
 
   def install
+    patch do
+      url "https://raw.githubusercontent.com/foundintranslation/Kaldi/master/tools/openfst.patch"
+      sha1 "9917adbc68ab0618b5a66895ac237ef78f60ba71"
+    end
+
     ENV.cxx11
     system "./configure", "--prefix=#{prefix}",
                           "--disable-dependency-tracking",
