@@ -5,7 +5,7 @@ class Openfst < Formula
 
   patch do
     url "https://raw.githubusercontent.com/foundintranslation/Kaldi/master/tools/openfst.patch"
-    sha256 "66e3e750ed38ca890842e5ebc3fa2574b73d4f4a"
+    sha256 "2859b3891c31955b5e05a54490377f453d2213d4c1b1309840c8b47b74a7ed67"
   end
 
   needs :cxx11
