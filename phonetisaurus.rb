@@ -14,7 +14,7 @@ class Phonetisaurus < Formula
       system "./configure",
              "--prefix=#{prefix}",
              "--exec-prefix=#{prefix}",
-             "--with-install-bin=#{prefix}"
+             "--with-install-bin=#{prefix}/bin"
       system "make", "install"
     end
   end
