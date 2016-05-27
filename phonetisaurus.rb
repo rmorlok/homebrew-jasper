@@ -11,9 +11,12 @@ class Phonetisaurus < Formula
     ENV.cxx11
 
     Dir.chdir "src" do
+      mkdir_p "#{prefix}/bin"
       system "./configure",
-             "--prefix=#{prefix}"
-      system "make", "install", "--prefix=#{prefix}"
+             "--prefix=#{prefix}",
+             "--exec-prefix=#{prefix}",
+             "--with-install-bin=#{prefix}/bin"
+      system "make", "install"
     end
   end
 end
