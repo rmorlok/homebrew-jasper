@@ -9,8 +9,10 @@ class Phonetisaurus < Formula
 
   def install
     ENV.cxx11
-    Dir.chdir "src"
-    system "./configure", "--prefix=#{prefix}"
-    system "make", "install"
+
+    Dir.chdir "src" do
+      system "./configure", "--prefix=#{prefix}"
+      system "make", "install"
+    end
   end
 end
