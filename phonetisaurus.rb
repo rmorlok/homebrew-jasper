@@ -1,7 +1,7 @@
 class Phonetisaurus < Formula
   homepage "http://www.openfst.org/"
   url "https://github.com/rmorlok/Phonetisaurus/archive/v0.1.tar.gz"
-  sha256 "6593edb401d047d942365437be012d974990609b6eb89814d1c6422a4161771e"
+  sha256 "49975ed9eff8f8f325d6f599c73ef335ab8fd44aedc653e4b1ba06cdd0c646bd"
 
   needs :cxx11
 
