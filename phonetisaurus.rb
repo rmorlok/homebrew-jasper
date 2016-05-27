@@ -12,10 +12,8 @@ class Phonetisaurus < Formula
 
     Dir.chdir "src" do
       system "./configure",
-             "--prefix=#{prefix}",
-             "--exec-prefix=#{prefix}",
-             "--with-install-bin=#{prefix}/bin"
-      system "make", "install"
+             "--prefix=#{prefix}"
+      system "make", "install", "--prefix=#{prefix}"
     end
   end
 end
